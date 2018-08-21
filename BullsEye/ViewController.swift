@@ -23,7 +23,19 @@ class ViewController: UIViewController {
     }
 
     @IBAction func showAlert(){
-        print("Hello!")
+        
+        //Create Alert Dialog/Controller
+        let alert = UIAlertController(title: "Hello World", message: "UIAlertController", preferredStyle: .alert)
+        
+        //Create Action button to Alert Dialog/Controller
+        let action = UIAlertAction(title: "UIAlertAction", style: .default, handler: nil)
+        
+        //Add the Action Button to the Alert Dialog
+        alert.addAction(action)
+        
+        //Add the Alert Dialog to be present in the UIViewController 
+        present(alert,animated: true, completion: nil)
+        
     }
 }
 
