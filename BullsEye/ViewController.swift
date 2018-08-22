@@ -51,7 +51,8 @@ class ViewController: UIViewController {
         //Add the Action Button to the Alert Dialog
         alert.addAction(action)
         
-        //Add the Alert Dialog to be present in the UIViewController 
+        //Add the Alert Dialog to be present in the UIViewController
+        //This fuction is Asynchronous Asynchronous Asynchronous does not wait by alert
         present(alert,animated: true, completion: nil)
     }
     
@@ -114,14 +115,10 @@ class ViewController: UIViewController {
     ///The score the score from the current round
     ///Different between the target value and the current slide value
     func calculateScoreCurRound(targetValue: Int, currentValue: Int) -> Int{
-        
         //Calculate the difference
-        var difference = targetValue - currentValue
+        //The difference is absolute
+        let difference = abs(targetValue - currentValue)
         
-        //If the currentValue is higher than the target value
-        if(difference < 0){
-            difference = abs(difference)
-        }
         return difference;
     }
     
@@ -149,7 +146,7 @@ class ViewController: UIViewController {
         return scoreFromThisRound
     }
     
-    @IBAction func startOver(_ button: UIButton){
+    @IBAction func startNewGame(_ barButtonItem: UIBarButtonItem){
         startNewRound(isFirstRound: true)
     }
 }
