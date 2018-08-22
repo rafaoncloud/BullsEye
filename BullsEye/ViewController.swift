@@ -39,7 +39,7 @@ class ViewController: UIViewController {
         
         //let message = "The current slider value is \(currentValue!)\nThe target value is \(targetValue!)\nScore obtained in this round \(scoreFromRound)"
         
-        let message = "Bulls Eye value is \(targetValue!)\nThis round you got \(scoreFromRound) points."
+        let message = "Bull's Eye value is \(targetValue!)\nThis round you got \(scoreFromRound) points."
         
         //Create Alert Dialog/Controller
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
